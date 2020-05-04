@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:link {
+    background-color: hsl(220, 100%, 70%);
+}
+
+.card {
+    width: 320px;
+    height: 415px;
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.1);
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(1);
+    transition: all 0.2s ease;
+    margin-right: 20px;
+    border-radius: 0 70px;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    border-radius: 0;
+}
+
+.card-body h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: hsl(220, 40%, 40%);
+    animation: fade 0.4s ease 0.1s forwards;
+    opacity: 0;
+}
+
+.card-body h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    color: hsl(220, 40%, 40%);
+    line-height: 23px;
+    word-spacing: 4px;
+    animation: fade 0.4s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.card-body p {
+    font-size: 14px;
+    font-weight: 300;
+    color: hsl(220, 40%, 70%);
+    line-height: 23px;
+    word-spacing: 4px;
+    animation: fade 0.4s ease 0.5s forwards;
+    opacity: 0;
+}
+
+.card-button {
+    margin-top: auto;
+}
+
+.explore {
+    display: flex;
+    padding: 18px;
+    border-radius: 2px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: slideLeft 0.7s ease 0.7s forwards;
+
+}
+
+.explore:hover {
+    background-color: hsl(220, 100%, 60%);
+}
+
+.explore svg {
+    transform: translateX(0);
+    margin-left: 10px;
+    transition: all 0.2s ease;
+}
+
+.explore:hover svg {
+    transform: translateX(20px);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-230px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card:nth-of-type(2) h1 {
+    color: hsl(340, 40%, 40%);
+}
+
+.card:nth-of-type(2) h2 {
+    color: hsl(340, 40%, 40%);
+}
+
+.card:nth-of-type(2) p {
+    color: hsl(340, 40%, 70%);
+}
+
+.card:nth-of-type(2) .card-button .explore {
+    background-color: #ff3377;
+}
+
+.card:nth-of-type(2) .card-button .explore:hover {
+    background-color: hsl(340, 100%, 50%);
+}
+
+.card:nth-of-type(3) h1 {
+    color: hsl(100, 40%, 40%);
+}
+
+.card:nth-of-type(3) h2 {
+    color: hsl(100, 40%, 40%);
+}
+
+.card:nth-of-type(3) p {
+    color: hsl(100, 40%, 70%);
+}
+
+.card:nth-of-type(3) .card-button .explore {
+    background-color: hsl(100, 100%, 60%);
+}
+
+.card:nth-of-type(3) .card-button .explore:hover {
+    background-color: hsl(100, 100%, 50%);
+}
+
+main {
+    position: fixed;
+    top: -30%;
+    right: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+section {
+    display: flex;
+}
+
+@media (max-width: 992px) {
+    section {
+        flex-direction: column;
+        padding-top: 800px;
+    }
+
+    main {
+        top: 20%;
+    }
+
+    .card {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
