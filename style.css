@@ -29,7 +29,7 @@ a:active {
 }
 
 a:link {
-    background-color: hsl(220, 100%, 70%);
+    background-color: hsl(240, 100%, 50%);
 }
 
 .card {
@@ -55,7 +55,7 @@ a:link {
 .card-body h1 {
     font-size: 28px;
     margin-bottom: 12px;
-    color: hsl(220, 40%, 40%);
+    color: hsl(240, 40%, 40%);
     animation: fade 0.4s ease 0.1s forwards;
     opacity: 0;
 }
@@ -64,7 +64,7 @@ a:link {
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 12px;
-    color: hsl(220, 40%, 40%);
+    color: hsl(240, 40%, 40%);
     line-height: 23px;
     word-spacing: 4px;
     animation: fade 0.4s ease 0.3s forwards;
@@ -74,7 +74,7 @@ a:link {
 .card-body p {
     font-size: 14px;
     font-weight: 300;
-    color: hsl(220, 40%, 70%);
+    color: hsl(240, 40%, 70%);
     line-height: 23px;
     word-spacing: 4px;
     animation: fade 0.4s ease 0.5s forwards;
@@ -94,12 +94,8 @@ a:link {
     align-items: center;
     opacity: 0;
     animation: slideLeft 0.7s ease 0.7s forwards;
-
 }
 
-.explore:hover {
-    background-color: hsl(220, 100%, 60%);
-}
 
 .explore svg {
     transform: translateX(0);
@@ -134,43 +130,36 @@ a:link {
 }
 
 .card:nth-of-type(2) h1 {
-    color: hsl(340, 40%, 40%);
+    color: hsl(0, 40%, 40%);
 }
 
 .card:nth-of-type(2) h2 {
-    color: hsl(340, 40%, 40%);
+    color: hsl(0, 40%, 40%);
 }
 
 .card:nth-of-type(2) p {
-    color: hsl(340, 40%, 70%);
+    color: hsl(0, 40%, 70%);
 }
 
 .card:nth-of-type(2) .card-button .explore {
-    background-color: #ff3377;
-}
-
-.card:nth-of-type(2) .card-button .explore:hover {
-    background-color: hsl(340, 100%, 50%);
+    background-color: hsl(0, 100%, 60%);
 }
 
 .card:nth-of-type(3) h1 {
-    color: hsl(100, 40%, 40%);
+    color: hsl(60, 100%, 40%);
 }
 
 .card:nth-of-type(3) h2 {
-    color: hsl(100, 40%, 40%);
+    color: hsl(60, 40%, 40%);
 }
 
 .card:nth-of-type(3) p {
-    color: hsl(100, 40%, 70%);
+    color: hsl(60, 40%, 70%);
 }
 
 .card:nth-of-type(3) .card-button .explore {
-    background-color: hsl(100, 100%, 60%);
-}
-
-.card:nth-of-type(3) .card-button .explore:hover {
-    background-color: hsl(100, 100%, 50%);
+    background-color: hsl(60, 100%, 60%);
+    color: #000;
 }
 
 main {
