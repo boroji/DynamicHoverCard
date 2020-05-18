@@ -12,6 +12,12 @@
     box-sizing: border-box;
 }
 
+/* 
+---------------
+(1)- adding 100% for body
+---------------
+*/
+
 body {
     width: 100%;
     height: 100vh;
@@ -21,30 +27,48 @@ body {
     background-color: #fff;
 }
 
-a:link,
-a:visited,
-a:active {
-    text-decoration: none;
-    color: #fff;
+/* 
+---------------
+(2)- adding display flex
+---------------
+*/
+
+section {
+    display: flex;
 }
 
-a:link {
-    background-color: hsl(240, 100%, 50%);
+/* 
+---------------
+(3)- adding svg position
+---------------
+*/
+
+main {
+    position: fixed;
+    top: -30%;
+    right: 0;
+    width: 100%;
+    z-index: -10;
 }
+
+/* 
+---------------
+(4)- adding card styles
+---------------
+*/
 
 .card {
     width: 320px;
     height: 415px;
-    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.1);
     padding: 45px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transform: scale(1);
-    transition: all 0.2s ease;
     margin-right: 20px;
     border-radius: 0 70px;
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transform: scale(1);
+    transition: all 0.2s ease;
 }
 
 .card:hover {
@@ -52,12 +76,16 @@ a:link {
     border-radius: 0;
 }
 
+/* 
+---------------
+(5)- adding text styles
+---------------
+*/
+
 .card-body h1 {
     font-size: 28px;
     margin-bottom: 12px;
     color: hsl(240, 40%, 40%);
-    animation: fade 0.4s ease 0.1s forwards;
-    opacity: 0;
 }
 
 .card-body h2 {
@@ -67,8 +95,6 @@ a:link {
     color: hsl(240, 40%, 40%);
     line-height: 23px;
     word-spacing: 4px;
-    animation: fade 0.4s ease 0.3s forwards;
-    opacity: 0;
 }
 
 .card-body p {
@@ -77,29 +103,47 @@ a:link {
     color: hsl(240, 40%, 70%);
     line-height: 23px;
     word-spacing: 4px;
-    animation: fade 0.4s ease 0.5s forwards;
-    opacity: 0;
 }
 
-.card-button {
-    margin-top: auto;
+/* 
+---------------
+(6)- Default link styles
+---------------
+*/
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #fff;
+    background-color: #fff;
+    background-color: hsl(240, 100%, 60%);
 }
+
+/* 
+---------------
+(7)- button styles
+---------------
+*/
 
 .explore {
-    display: flex;
     padding: 18px;
     border-radius: 2px;
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    animation: slideLeft 0.7s ease 0.7s forwards;
 }
 
+/* 
+---------------
+(8)- svg hover effect
+---------------
+*/
 
 .explore svg {
-    transform: translateX(0);
     margin-left: 10px;
+    transform: translateX(0);
     transition: all 0.2s ease;
 }
 
@@ -107,27 +151,15 @@ a:link {
     transform: translateX(20px);
 }
 
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.card-button {
+    margin-top: auto;
 }
 
-@keyframes slideLeft {
-    from {
-        transform: translateX(-230px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+/* 
+---------------
+(9)- adding text styles for red
+---------------
+*/
 
 .card:nth-of-type(2) h1 {
     color: hsl(0, 40%, 40%);
@@ -145,6 +177,12 @@ a:link {
     background-color: hsl(0, 100%, 60%);
 }
 
+/* 
+---------------
+(10)- adding text styles for yellow
+---------------
+*/
+
 .card:nth-of-type(3) h1 {
     color: hsl(60, 100%, 40%);
 }
@@ -160,32 +198,4 @@ a:link {
 .card:nth-of-type(3) .card-button .explore {
     background-color: hsl(60, 100%, 60%);
     color: #000;
-}
-
-main {
-    position: fixed;
-    top: -30%;
-    right: 0;
-    width: 100%;
-    z-index: -10;
-}
-
-section {
-    display: flex;
-}
-
-@media (max-width: 992px) {
-    section {
-        flex-direction: column;
-        padding-top: 800px;
-    }
-
-    main {
-        top: 20%;
-    }
-
-    .card {
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
 }
